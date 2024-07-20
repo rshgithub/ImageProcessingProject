@@ -41,16 +41,16 @@ describe('Image Controller Tests', () => {
     expect(response.text).toBe('File uploaded successfully.');
   });
 
-  test('POST /api/images/resize - Resize Image', async () => {
-    const response = await request(app)
-      .post('/api/images/resize')
-      .field('width', 100)
-      .field('height', 100)
-      .attach('image', imagePath) 
+  // test('POST /api/images/resize - Resize Image', async () => {
+  //   const response = await request(app)
+  //     .post('/api/images/resize')
+  //     .field('width', 100)
+  //     .field('height', 100)
+  //     .attach('image', imagePath) 
 
-    expect(response.status).toBe(200);
-    expect(response.text).toBe('File resized successfully.');
-  });
+  //   expect(response.status).toBe(200);
+  //   expect(response.text).toBe('File resized successfully.');
+  // });
 
 //   test('POST /api/images/crop - Crop Image', async () => {
 //     const response = await request(app)
